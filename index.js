@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/config')
 const cors = require('cors')
-const routes = require('./routes')
+const router = require('./routes')
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
-app.use('/', routes)
+app.use('/', router)
 
 const PORT = process.env.PORT || 5000;
 

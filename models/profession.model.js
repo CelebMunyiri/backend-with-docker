@@ -16,10 +16,13 @@ const professionSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     }
+},
+{
+    timestamps: true
 })
 
-professionSchema.pre('save',async(next)=>{
+// professionSchema.pre('save',async(next)=>{
 
-})
+// })
 
 module.exports = mongoose.model('Profession',professionSchema)

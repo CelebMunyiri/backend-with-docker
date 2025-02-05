@@ -1,4 +1,7 @@
 const userRoute = require('./user.route')
+const express = require('express')
+
+const router = express.Router()
 
 
 const defaultRoutes =[
@@ -6,7 +9,7 @@ const defaultRoutes =[
 ]
 
 const routes = defaultRoutes.forEach((route)=>{
-    app.use(route.path, route.route)
+    router.use(route.path, route.route)
 })
 
-module.exports = routes;
+module.exports = router;

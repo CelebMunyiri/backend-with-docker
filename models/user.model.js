@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         minlength:8
     },
     profession:{
-        type:mongoose.SchemaTypes.ObjectIdentity,
+        type:mongoose.SchemaTypes.ObjectId,
         ref: 'Profession',
         required: true
     },
@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
     enum:['giver','receiver']
     },
     location:{
-        type: mongoose.SchemaTypes.GeoJSON,
+        type: String,
         required: true
     },
     image:{
