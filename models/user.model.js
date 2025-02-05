@@ -50,6 +50,10 @@ const userSchema = new mongoose.Schema({
     is_deleted:{
         type:Boolean,
         default:false
+      },
+      rating:{
+        type: Number,
+        default: 0
       }
 },{
     timestamps: true

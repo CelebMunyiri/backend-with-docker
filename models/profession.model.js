@@ -8,7 +8,18 @@ const professionSchema = new mongoose.Schema({
     description:{
         type:String,
 
+    },
+    field:{
+        type:String
+    },
+    is_deleted:{
+        type:Boolean,
+        default:false
     }
+})
+
+professionSchema.pre('save',async(next)=>{
+
 })
 
 module.exports = mongoose.model('Profession',professionSchema)
