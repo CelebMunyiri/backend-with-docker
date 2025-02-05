@@ -2,9 +2,16 @@ const Joi = require('joi');
 
 const createUserValidator ={
     body:Joi.object().keys({
-    username:Joi.string().required(),
+    name:Joi.string().required(),
     email: Joi.string().required().email(),
     password: Joi.string().required(),
+    role: Joi.string().required(),
+    phone: Joi.string().required(),
+    profession:Joi.string().required(),
+    image: Joi.string(),
+    gender: Joi.string(),
+    service_offering: Joi.string().required(),
+    location: Joi.string().required(),
     confirmPassword: Joi.ref('password'),
    
 })
