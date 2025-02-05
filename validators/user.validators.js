@@ -1,20 +1,31 @@
 const Joi = require('joi');
 
-const createUserValidator =({
-    username:Joi.string().required().maxLength(30).minLength(10),
+const createUserValidator ={
+    body:Joi.object().keys({
+    username:Joi.string().required(),
     email: Joi.string().required().email(),
-    password: Joi.string().required().minLength(8).maxLength(20),
+    password: Joi.string().required(),
     confirmPassword: Joi.ref('password'),
    
 })
+}
 
-const updateUserValidator =({
-    username: Joi.string().optional().maxLength(30).minLength(10),
+const updateUserValidator = {
+    body:Joi.object().keys({
+        username: Joi.string().optional(),
     email: Joi.string().optional().email(),
-})
+
+    })
+    
+}
+
+const updatePassword = {
+    password: Joi.string().required(),
+}
 
 
 module.exports = {
     createUserValidator,
     updateUserValidator,
+    updatePassword
 };
