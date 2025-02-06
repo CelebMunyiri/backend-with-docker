@@ -13,9 +13,9 @@ const createProfession = async(body)=>{
 
 const getAllProfessions = async()=>{
     
-        const professions = await Profession.find({})
+        const professions = await Profession.find({is_deleted:false})
         return professions;
     
 }
 
-module.exports ={ getAllProfessions, createProfession}
+module.exports = { getAllProfessions, createProfession}

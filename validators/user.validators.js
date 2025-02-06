@@ -11,6 +11,7 @@ const createUserValidator ={
     image: Joi.string(),
     gender: Joi.string(),
     service_offering: Joi.string().required(),
+    tasks: Joi.array(),
     location: Joi.string().required(),
     confirmPassword: Joi.ref('password'),
    
