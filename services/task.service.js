@@ -20,5 +20,6 @@ const getAllTasks = async()=>{
 }
 
 module.exports = {
-    createTaskService
+    createTaskService,
+    getAllTasks
 }
